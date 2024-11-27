@@ -4,8 +4,10 @@ import jakarta.persistence.*;
 import lombok.*;
 import umc.spring.workbook5.domain.common.BaseEntity;
 import umc.spring.workbook5.domain.mapping.MemberMission;
+import umc.spring.workbook5.domain.mapping.MissionStatus;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +24,7 @@ public class Mission extends BaseEntity {
 
     private Integer reward;
 
-    private LocalDate deadline;
+    private LocalDateTime deadline;
 
     private String missionSpec;
 

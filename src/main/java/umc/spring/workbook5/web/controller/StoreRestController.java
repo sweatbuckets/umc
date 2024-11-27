@@ -14,7 +14,7 @@ import umc.spring.workbook5.web.dto.ReviewResponseDTO;
 public class StoreRestController {
     private final StoreCommandService storeCommandService;
 
-    @PostMapping("/stores/{store_id}/reviews")
+    @PostMapping("/{store_id}/reviews")
     public ApiResponse<ReviewResponseDTO.ReviewResultDTO> createReview(@PathVariable("store_id") Long storeId, @RequestBody @Valid ReviewRequestDTO.ReviewDTO request){
         return ApiResponse.onSuccess(storeCommandService.createReview(request, storeId));
     }
