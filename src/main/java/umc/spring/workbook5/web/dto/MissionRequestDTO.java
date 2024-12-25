@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MissionRequestDTO {
+public class  MissionRequestDTO {
 
     @Getter
     public static class MemberMissionDTO{

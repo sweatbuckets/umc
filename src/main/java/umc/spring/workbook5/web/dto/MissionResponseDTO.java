@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import umc.spring.workbook5.domain.mapping.MissionStatus;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class MissionResponseDTO {
     @Getter
@@ -16,11 +17,25 @@ public class MissionResponseDTO {
     public static class MemberMissionResultDTO{
 
         MissionStatus status;
-
         LocalDateTime deadline;
+        Long missionId;
+        String missionSpec;
+        String storeName;
+        LocalDateTime createdAt;
 
-        String store_name;
+    }
 
+    @Getter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    @Builder
+    public static class MemberMissionResultListDTO{
+        List<MemberMissionResultDTO> memberMissionResultList;
+        Integer listSize;
+        Integer totalPage;
+        Long totalElements;
+        Boolean isFirst;
+        Boolean isLast;
     }
 
 }

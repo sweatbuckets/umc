@@ -34,7 +34,7 @@ public class StoreCommandServiceImpl implements StoreCommandService {
         Review review = ReviewConverter.toReview(requestDTO, member.get(), store.get());
         reviewRepository.save(review);
 
-        //3. 변환한 review를 reponseDTP로 변환하여 return
+        //3. 변환한 review를 reponseDTO로 변환하여 return
         return  ReviewConverter.toReviewResultDTO(review);
     }
 }
